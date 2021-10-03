@@ -110,3 +110,35 @@
     </div>
   </form>
 </div>
+export class AppComponent {
+  // constructor(public loginService: LoginService, private router: Router) {}
+  constructor() {}
+  title = 'Disaster-recovery';
+  onClick(e: any) {
+    e.target.previousSibling.style.display = 'none';
+  }
+  onBlur(e: any) {
+    if (e.target.value == '') {
+      e.target.previousSibling.style.display = 'inline';
+    }
+  }
+}
+.form-group {
+  position: relative;
+}
+.placeholder {
+  position: absolute;
+  top: 9px;
+  left: 30px;
+}
+span {
+  color: red;
+}
+.form-group input{
+  box-sizing: border-box;
+  border: 3px solid;
+  border-color: black;
+}
+label{
+  font-weight: bold;
+}
